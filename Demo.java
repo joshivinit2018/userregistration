@@ -1,12 +1,13 @@
+  
 import java.util.regex.*;
 
 public class Demo {
    public static void main(String args[]) {
-      String pwd2 = "Vintax77";
-      String regex = ("(?=.*[A-Z])[a-zA-Z0-9]{8,}");
+      String pwd3 = "Joshi@72";
+      String regex = "(?=[^#?!@$%^&*-]*[#?!@$%^&*-][^#?!@$%^&*-]*$)(?=.*[A-Z])(?=.*[0-9]).{8,}";
       Pattern p = Pattern.compile(regex);
-      Matcher m = p.matcher(pwd2);
-      System.out.println("pwasward 1 rule is is: " + pwd2);
-      System.out.println("Is the fname is valid? " + pwd2.matches(regex));
+      Matcher m = p.matcher(pwd3);
+      System.out.println("pass 3rd rule  is: " + pwd3);
+      System.out.println("Is the pwd is valid? " + pwd3.matches(regex));
    }
 }
